@@ -13,7 +13,35 @@
         <p>And you'll get a random hairstyle picked out for you</p></p>
         
     <form id="preferencesForm">
+        <label>Hair Length:</label>
+        <select id="length">
+            <option value="short">Short</option>
+            <option value="med">Medium</option>
+            <option value="long">Long</option>
+        </select>
         
+        <label>Style:</label>
+        <select id="style">
+            <option value="nat">Natural</option>
+            <option value="ext">Attachment/Extensions</option>
+        </select>
+        
+        <label>Color:</label>
+        <select id="color">
+            <option value="black">Black/1B</option>
+            <option value="ginger">Ginger/350/30</option>
+            <option value="burg">Burgundy</option>
+            <option value="blonde">Blonde/613</option>
+            <option value="mixed">Mixed Blend</option>
+            <option value="multiple">Multiple Colors</option>
+            <option value="random">Random</option>
+        </select>
+        
+        <button type="button" id="spinBtn">Spin the Wheel</button>
     </form>
+    
+    <div id="result"></div>
+    
+    <<script src="script.js"></script>
     </body>
 </html>

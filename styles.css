@@ -34,3 +34,36 @@ button {
     margin-top: 30px;
     font-size: 24px;
 }
+
+.resultBox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: #ff000080;
+}
+
+.boxContent {
+    text-align: center;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 350px;
+}
+
+#closeBox {
+    cursor: pointer;
+    float: right;
+    font-size: 24px;
+}
+
+.boxContent img {
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 10px;
+}

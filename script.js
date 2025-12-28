@@ -23,20 +23,32 @@ const hairstyles = [
     {name: "Twists", length: "short", style: "ext", color: "black"}
 ];
 
-document.getElementbyId("spinBtn").addEventListener("click", () => {
-    const selectedLength = document.getElementbyId("length").value;
-    const selectedStyle = document.getElementbyId("style").value;
-    const selectedColor = document.getElementbyId("color").value;
+document.getElementById("spinBtn").addEventListener("click", () => {
+    const selectedLength = document.getElementById("length").value;
+    const selectedStyle = document.getElementById("style").value;
+    const selectedColor = document.getElementById("color").value;
     
-    const filtered = hairstyles.filter(h => h.length === selectedLength && h.style === selectedStyle && h.color === selectedColor);
+    const filtered = hairstyles.filter(h => 
+        h.length.includes(selectedLength) &&
+        h.style === selectedStyle &&
+        h.color.includes(selectedColor)
+    );
     
     if (filtered.length === 0) {
-        document.getElementbyId("result").textContent = "No matches found. Please try again...";
+        document.getElementById("result").textContent = "No matches found. Please try again...";
         return;
     }
     
     const randomIndex = Math.floor(Math.random() * filtered.length);
     const chosenHairstyle = filtered[randomIndex];
     
-    document.getElementById("result").textContent = 'Your next hairstyle is: ${chosenHairstyle.name}';
+    document.getElementById("boxTitle").textContent = chosenHairstyle.name;
+    document.getElementById("boxImg").src = chosenHairstyle.image;
+    document.getElementById("boxLink").href = chosenHairstyle.link;
+    
+    document.getElementById("resultBox").style.display = "flex";
+ });
+ 
+document.getElementById("closeBox").addEventListener("click", () => {
+    document.getElementById("resultBox").style.display = "none";
 });

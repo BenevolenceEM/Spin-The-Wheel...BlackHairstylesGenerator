@@ -5,40 +5,52 @@
         <title>Black Hairstyles Generator</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="styles.css">
+        
+        <script src="https://cdn.jsdelivr.net/gh/zarocknz/javascript-winwheel/Winwheel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     </head>
     <body>
-        <h1>Wheel of Black Hairstyles</h1>
-        <p>Do you need help deciding what your next hairstyle should be?</p>
-        <p>Fill out the form below and spin the wheel<br>
-        <p>And you'll get a random hairstyle picked out for you</p></p>
+        <h1>Wheel of Black Women Hairstyles</h1>
+        <p><em>Do you need help deciding what your next hairstyle should be?</em></p>
+        <p>Fill out the form below and spin the wheel<br><br>
+        And you'll get a random hairstyle picked out for you</p>
         
-    <form id="preferencesForm">
-        <label>Hair Length:</label>
-        <select id="length">
-            <option value="short">Short</option>
-            <option value="med">Medium</option>
-            <option value="long">Long</option>
-        </select>
-        
-        <label>Style:</label>
-        <select id="style">
-            <option value="nat">Natural</option>
-            <option value="ext">Attachment/Extensions</option>
-        </select>
-        
-        <label>Color:</label>
-        <select id="color">
-            <option value="black">Black/1B</option>
-            <option value="ginger">Ginger/350/30</option>
-            <option value="burg">Burgundy</option>
-            <option value="blonde">Blonde/613</option>
-            <option value="mixed">Mixed Blend</option>
-            <option value="multiple">Multiple Colors</option>
-            <option value="random">Random</option>
-        </select>
-        
-        <button type="button" id="spinBtn">Spin the Wheel</button>
-    </form>
+        <div class="layout">
+            <div class="left"> <!--form on the left -->
+                <form id="preferencesForm">
+                    <label>Hair Length:</label>
+                    <select id="length">
+                        <option value="short">Short</option>
+                        <option value="med">Medium</option>
+                        <option value="long">Long</option>
+                    </select>
+
+                    <label>Style:</label>
+                    <select id="style">
+                        <option value="nat">Natural</option>
+                        <option value="ext">Attachment/Extensions</option>
+                    </select>
+
+                    <label>Color:</label>
+                    <select id="color">
+                        <option value="black">Black/1B</option>
+                        <option value="brown">Brown/4</option>
+                        <option value="ginger">Ginger/350/30</option>
+                        <option value="burg">Burgundy</option>
+                        <option value="blonde">Blonde/613</option>
+                        <option value="mixed">Mixed Blend</option>
+                        <option value="multiple">Multiple Colors</option>
+                        <option value="random">Random</option>
+                    </select>
+
+                    <button type="button" id="spinBtn">Spin the Wheel</button>
+                </form>
+            </div>
+            
+            <div class="right"> <!--wheel on the right -->
+                <canvas id="wheelCanvas" width="500" height="500"></canvas>
+            </div>
+        </div>
     
     <div id="result"></div>
     
@@ -50,6 +62,15 @@
             <a id="boxLink" href="" target="_blank">See More Inspo Pictures</a>
         </div>
     </div>
+    
+    <footer>
+        &copy; 2026<br><br>
+        Coded by <a href="https://github.com/BenevolenceEM"><i>Benevolence Ed-Malik</i></a><br><br>
+        Hairstyle images are sourced from Pinterest and are used for inspiration purposes only.<br><br>
+        I do not claim ownership of any images.
+        If you are the owner and would like an image removed, please
+        <a href="mailto:maliksofia58@gmail.com"><i>contact</i></a> to request removal.
+    </footer>
     
     <script src="script.js"></script>
     </body>

@@ -375,8 +375,8 @@ function createWheel(hairstyleList) {
         canvasId: 'wheelCanvas',
         numSegments: segments.length,
         segments: segments,
-        textFontSize: 14,
-        textMargin: 25,
+        textFontSize: 12,
+        textMargin: 10,
         textAlignment: 'outer',
         animation: {
             type: 'spinToStop',
